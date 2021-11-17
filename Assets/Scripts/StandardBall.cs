@@ -10,5 +10,10 @@ public class StandardBall : BallBase
         {
             this.AddPoints();
         }
+
+        if (trigger.CompareTag("OutOfBounds"))
+        {
+            Destroy(this);
+        }
     }
 }

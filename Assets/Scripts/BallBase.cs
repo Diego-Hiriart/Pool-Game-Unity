@@ -7,15 +7,15 @@ public class BallBase : MonoBehaviour
 {
     [SerializeField]
     private GameObject controller;
-    private GameController gameControl;
+    protected GameController gameControl;
 
-    private float posX;
-    private float posY;
-    private float posZ;
+    protected float posX;
+    protected float posY;
+    protected float posZ;
     [SerializeField]
-    private int ballNumber;
+    protected int ballNumber;
 
-    private void Awake()
+    void Awake()
     {
         this.gameControl = this.controller.GetComponent<GameController>();
     }
@@ -60,7 +60,7 @@ public class BallBase : MonoBehaviour
         return this.posZ;
     }
 
-    public int getBallNumber()
+    public int GetBallNumber()
     {
         return this.ballNumber;
     }

@@ -14,6 +14,10 @@ public class GameController : MonoBehaviour
     private UIController UI;
     [SerializeField]
     private AudioSource backgroundMusic;
+    [SerializeField]
+    private GameObject cueStick;
+    private Vector3 cueStickStartPos = new Vector3(0f, 0.35f, -1.8f);
+    private Quaternion cueStickStartRot = new Quaternion(0.74314481f, 0, 0, 0.669130683f);
 
     private const string musicVolumeKey = "music_volume";
 
@@ -83,6 +87,7 @@ public class GameController : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene("PoolGame");//Reload the scene
+        Time.timeScale = 1;
     }
 
     private SaveGameData CreateSaveGameData()
@@ -90,7 +95,7 @@ public class GameController : MonoBehaviour
         List<BallInfo> ballsInfo = new List<BallInfo>();
         foreach(BallBase ball in this.gameBalls)
         {
-            ballsInfo.Add(new BallInfo(ball.GetPosX(), ball.GetPosY(), ball.GetPosZ(), ball.getBallNumber()));
+            ballsInfo.Add(new BallInfo(ball.GetPosX(), ball.GetPosY(), ball.GetPosZ(), ball.GetBallNumber()));
         }
         return new SaveGameData(this.score, ballsInfo);
     }
@@ -119,6 +124,8 @@ public class GameController : MonoBehaviour
 
             this.score = saveData.GetPoints();
             this.gameBalls = this.LoadBalls(saveData);
+            this.cueStick.transform.position = this.cueStickStartPos;
+            this.cueStick.transform.rotation = this.cueStickStartRot;
             this.SetScore(this.score);
         }
     }
@@ -130,7 +137,7 @@ public class GameController : MonoBehaviour
         {
             BallInfo ball = saveData.GetBallsStatus()[i];
             this.gameBalls[i].transform.position = new Vector3(ball.GetPosX(), ball.GetPosY(), ball.GetPosZ());
-            this.gameBalls[i].SetBallNumber(ball.getBallNumber());
+            this.gameBalls[i].SetBallNumber(ball.GetBallNumber());
         }
         return balls;
     }
