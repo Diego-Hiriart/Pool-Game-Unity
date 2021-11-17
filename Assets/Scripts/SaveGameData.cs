@@ -6,35 +6,35 @@ using System.Collections.Generic;
 public class SaveGameData
 {
     private int points;
-    private List<BallBase> balls = new List<BallBase>();
+    private List<BallInfo> balls = new List<BallInfo>();
 
-    public SaveGameData(int score, List<BallBase> ballsStatus)
+    public SaveGameData(int score, List<BallInfo> ballsStatus)
     {
         this.points = score;
         this.balls = ballsStatus;
     }
     
-    public void setPoints(int points)
+    public void SetPoints(int points)
     {
         this.points = points;
     }
 
-    public void setBallsStatus(List<BallBase> balls)
+    public void SetBallsStatus(List<BallInfo> balls)
     {
         this.balls = balls;
     }
 
-    public int getPoints()
+    public int GetPoints()
     {
         return this.points;
     }
 
-    public List<BallBase> getBallsStatus()
+    public List<BallInfo> GetBallsStatus()
     {
         return this.balls;
     }
 
-    public void addBallsStatus(BallBase ball)
+    public void AddBallsStatus(BallInfo ball)
     {
         this.balls.Add(ball);
     }

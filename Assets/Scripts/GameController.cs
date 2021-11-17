@@ -86,8 +86,13 @@ public class GameController : MonoBehaviour
     }
 
     private SaveGameData CreateSaveGameData()
-    {      
-        return new SaveGameData(this.score, this.gameBalls);
+    {
+        List<BallInfo> ballsInfo = new List<BallInfo>();
+        foreach(BallBase ball in this.gameBalls)
+        {
+            ballsInfo.Add(new BallInfo(ball.GetPosX(), ball.GetPosY(), ball.GetPosZ(), ball.getBallNumber()));
+        }
+        return new SaveGameData(this.score, ballsInfo);
     }
 
     public void SaveGame()
@@ -112,9 +117,22 @@ public class GameController : MonoBehaviour
             var fs = File.Open(filePath, FileMode.Open);
             var saveData = (SaveGameData)bf.Deserialize(fs);
 
-            this.score = saveData.getPoints();
-            this.gameBalls = saveData.getBallsStatus();
+            this.score = saveData.GetPoints();
+            this.gameBalls = this.LoadBalls(saveData);
+            this.SetScore(this.score);
         }
+    }
+
+    private List<BallBase> LoadBalls(SaveGameData saveData)
+    {
+        List<BallBase> balls = new List<BallBase>();
+        for (int i = 0; i<saveData.GetBallsStatus().Count; i++)
+        {
+            BallInfo ball = saveData.GetBallsStatus()[i];
+            this.gameBalls[i].transform.position = new Vector3(ball.GetPosX(), ball.GetPosY(), ball.GetPosZ());
+            this.gameBalls[i].SetBallNumber(ball.getBallNumber());
+        }
+        return balls;
     }
 
     public void QuitGame()

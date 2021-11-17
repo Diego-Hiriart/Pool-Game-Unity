@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -662,6 +662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 5
 --- !u!1001 &107411690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -946,6 +947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 14
 --- !u!1 &303767443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,6 +1562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 7
 --- !u!1001 &604603097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2203,6 +2206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 3
 --- !u!1001 &721492259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2540,6 +2544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 1
 --- !u!1 &787968498 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6771825144381117084, guid: b37d9e812c648324ba15d6f25e1962dd, type: 3}
@@ -2558,6 +2563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 8
 --- !u!1 &871435270 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6771825144381117084, guid: b37d9e812c648324ba15d6f25e1962dd, type: 3}
@@ -2576,6 +2582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 9
 --- !u!1001 &924948996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2842,6 +2849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 15
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3458,6 +3466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 12
 --- !u!1001 &1366652473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3542,6 +3551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 13
 --- !u!1 &1410723735 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6771825144381117084, guid: b37d9e812c648324ba15d6f25e1962dd, type: 3}
@@ -3560,6 +3570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 0
 --- !u!1 &1459514569
 GameObject:
   m_ObjectHideFlags: 0
@@ -4381,7 +4392,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Points: '
+  m_text: 'Points: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4656,6 +4667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 11
 --- !u!1 &1803282486 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6771825144381117084, guid: b37d9e812c648324ba15d6f25e1962dd, type: 3}
@@ -4674,6 +4686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 6
 --- !u!1001 &1832135428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4816,6 +4829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 2
 --- !u!1 &1843166273
 GameObject:
   m_ObjectHideFlags: 0
@@ -4945,6 +4959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 10
 --- !u!1 &2057301717
 GameObject:
   m_ObjectHideFlags: 0
@@ -5238,6 +5253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 536816738}
+  ballNumber: 4
 --- !u!4 &2126099840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2486431941923879567, guid: 94bf2cf519d68f641a7eac8cb8f6a191, type: 3}
