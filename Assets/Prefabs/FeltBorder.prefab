@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2687523105648782397}
   - component: {fileID: 2687523105648782398}
   - component: {fileID: 2687523105648782399}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FeltBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

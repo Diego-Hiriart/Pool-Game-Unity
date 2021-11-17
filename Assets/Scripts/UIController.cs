@@ -14,6 +14,8 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI points;
     [SerializeField]
+    private TextMeshProUGUI force;
+    [SerializeField]
     private Slider volumeSlider;
     [SerializeField]
     private Button saveSettings;
@@ -57,6 +59,11 @@ public class UIController : MonoBehaviour
     public void UpdatePointsDisplay(int points)
     {
         this.points.text = "Points: " + points.ToString();
+    }
+
+    public void UpdateForceDisplay(float force)
+    {
+        this.force.text = "Force: " + int.Parse((force*100).ToString("000."));//Show force
     }
 
     private void SliderValueChange()

@@ -33,7 +33,7 @@ public class BallInfo
         return this.posZ;
     }
 
-    public int getBallNumber()
+    public int GetBallNumber()
     {
         return this.ballNumber;
     }
