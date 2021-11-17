@@ -11,4 +11,9 @@ public class WhiteBall : BallBase
             this.transform.position = new Vector3(0, 0.218799993f, -0.457500011f);//Starting position
         }
     }
+
+    private void FixedUpdate()
+    {
+        this.GetComponent<Rigidbody>().AddForce(new Vector3(0,0,0.25f));
+    }
 }

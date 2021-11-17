@@ -8,7 +8,7 @@ public class StandardBall : BallBase
     {
         if (trigger.CompareTag("Hole"))//Add points
         {
-            this.addPoints();
+            this.AddPoints();
         }
     }
 }
