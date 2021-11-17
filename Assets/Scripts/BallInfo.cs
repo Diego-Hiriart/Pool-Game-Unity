@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
+//Class that stores the info of where the ball is and what number it is
 [Serializable]
 public class BallInfo
 {
