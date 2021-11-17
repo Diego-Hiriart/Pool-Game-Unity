@@ -7,7 +7,7 @@ public class BallBase : MonoBehaviour
 {
     [SerializeField]
     private GameObject controller;
-    protected GameController gameControl;
+    protected GameController gameControl;//Game controller reference
 
     protected float posX;
     protected float posY;
@@ -35,9 +35,10 @@ public class BallBase : MonoBehaviour
         this.posZ = this.gameObject.transform.position.z;
     }
 
-    protected void AddPoints()
+    //Tell the game controller to add a point
+    protected void AddPoint()
     {
-        this.gameControl.AddPoints();
+        this.gameControl.AddPoint();
     }
 
     public void SetBallNumber(int number)
