@@ -7,15 +7,15 @@ public class BallBase : MonoBehaviour
 {
     [SerializeField]
     private GameObject controller;
-    private GameController gameControl;
+    protected GameController gameControl;//Game controller reference
 
-    private float posX;
-    private float posY;
-    private float posZ;
+    protected float posX;
+    protected float posY;
+    protected float posZ;
     [SerializeField]
-    private int ballNumber;
+    protected int ballNumber;
 
-    private void Awake()
+    void Awake()
     {
         this.gameControl = this.controller.GetComponent<GameController>();
     }
@@ -35,9 +35,10 @@ public class BallBase : MonoBehaviour
         this.posZ = this.gameObject.transform.position.z;
     }
 
-    protected void AddPoints()
+    //Tell the game controller to add a point
+    protected void AddPoint()
     {
-        this.gameControl.AddPoints();
+        this.gameControl.AddPoint();
     }
 
     public void SetBallNumber(int number)
@@ -60,7 +61,7 @@ public class BallBase : MonoBehaviour
         return this.posZ;
     }
 
-    public int getBallNumber()
+    public int GetBallNumber()
     {
         return this.ballNumber;
     }
