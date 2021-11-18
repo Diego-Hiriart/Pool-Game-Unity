@@ -8,6 +8,6 @@ Programacion V
 
 # Instrucciones
 - Usa W o S para incrementar o dismunuir la fuerza de golpe.
-- Usa A o D para girar la posición del cue stick.
+- Usa A o D para girar la posición el cue stick alrededor de la bola blanca.
 - Con Space empujas el cue.
-- Usa R centra el cue al frente de la bola blanca.
+- Usar R centra el cue al frente de la bola blanca.
